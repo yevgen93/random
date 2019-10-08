@@ -14,10 +14,14 @@ I really enjoyed the explanation of entropy and a true randomness by Robert Conn
 
 # Haveged
 ## https://linux.die.net/man/8/haveged
+## https://www.techrepublic.com/article/how-to-add-more-entropy-to-improve-cryptographic-randomness-on-linux/
+- I learned that a common problem for headless machines (that can't rely on the mouse/keyboard to generate entropy) is that the entropy runs out. And since `/dev/random` is a blocking device, it will wait indefinitely until the entropy pool is refilled.
 - Based on the HAVEGE principle, and previously based on its associated library, haveged allows generating randomness based on variations in code execution time on a processor.
+- In essence, Haveged is a great solution for boosting entropy and improving cryptographic randomness.
+
 
 # My Pseudo-Solution(s)
-- I have to admit that I don't have the coding experience to deliver a true clone of `cat /dev/random_`.
+- I have to admit that currently I do not have the engineering experience to deliver a true clone of `cat /dev/random_`.
 - However, I did find a solid source of entropy; the ANU Quantum Random Numbers Server: **http://qrng.anu.edu.au**. "This website offers true random numbers to anyone on the internet. The random numbers are generated in real-time in our lab by measuring the quantum fluctuations of a vacuum."
 - The ideal alternative solution to `cat /dev/random` would be to query their API as a entropy pool and dump the data to STDOUT.
 - After doing some more digging, I found a Github project that does just that: **https://github.com/kuberkaul/randomclone**
