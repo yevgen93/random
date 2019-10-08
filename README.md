@@ -1,6 +1,6 @@
 # Create a clone of ‘cat /dev/random’
 
-I was tasked with creating a clone of running the Linux command: _cat /dev/random_
+I was tasked with creating a clone of running the Linux command: `cat /dev/random`
 
 My initial research led me to a few interesting places on the interwebs:
 
@@ -13,18 +13,18 @@ I really enjoyed the explanation of entropy and a true randomness by Robert Conn
 
 
 # Haveged
-## https://www.digitalocean.com/community/tutorials/how-to-setup-additional-entropy-for-cloud-servers-using-haveged
+## https://linux.die.net/man/8/haveged
 - Based on the HAVEGE principle, and previously based on its associated library, haveged allows generating randomness based on variations in code execution time on a processor.
 
 # My Pseudo-Solution(s)
-- I have to admit that I don't have the coding experience to deliver a true clone of _cat /dev/random_ .
-- However, I did find a solid source of entropy; the ANU Quantum Random Numbers Server -> **http://qrng.anu.edu.au**. "This website offers true random numbers to anyone on the internet. The random numbers are generated in real-time in our lab by measuring the quantum fluctuations of a vacuum."
-- The ideal solution would be to query their API as a entropy pool and dump the data to STDOUT.
-- After doing some more digging, I found a Github project that does just that -> **https://github.com/kuberkaul/randomclone**
-- I also found a Python tool that interfaces with the same entropy pool and provides the `qrandom` CLI -> **https://pypi.org/project/quantumrandom/**
+- I have to admit that I don't have the coding experience to deliver a true clone of `cat /dev/random_`.
+- However, I did find a solid source of entropy; the ANU Quantum Random Numbers Server: **http://qrng.anu.edu.au**. "This website offers true random numbers to anyone on the internet. The random numbers are generated in real-time in our lab by measuring the quantum fluctuations of a vacuum."
+- The ideal alternative solution to `cat /dev/random` would be to query their API as a entropy pool and dump the data to STDOUT.
+- After doing some more digging, I found a Github project that does just that: **https://github.com/kuberkaul/randomclone**
+- I also found a Python tool that interfaces with the same entropy pool and provides the `qrandom` CLI: **https://pypi.org/project/quantumrandom/**
 
 So running the following commands in Terminal would replicate true random entropy being dumped to the screen:
-```python
+```
 sudo pip install quantumrandom
 qrandom --binary
 ```
