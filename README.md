@@ -14,7 +14,6 @@ _"Generating true entropy in a computer is fairly difficult because nothing, out
 
 # Haveged
 ## https://linux.die.net/man/8/haveged
-## https://www.techrepublic.com/article/how-to-add-more-entropy-to-improve-cryptographic-randomness-on-linux/
 - I learned that a common problem for headless machines (that can't rely on the mouse/keyboard to generate entropy) is that the entropy runs out. And since `/dev/random` is a blocking device, it will wait indefinitely until the entropy pool is refilled.
 - The HAVEGE principle allows generating randomness based on variations in code execution time on a processor.
 - In essence, Haveged is a great solution for boosting entropy and improving cryptographic randomness.
