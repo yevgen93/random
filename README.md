@@ -31,6 +31,7 @@ I also learned the difference between **(PRNG)** _Pseudo Random Number Generator
 ```
 git clone https://github.com/yevgen93/random.git
 cd random
+chmod +x quantum.sh
 ./quantum.sh
 ```
 ### Rand.py (assuming Python is installed)
