@@ -1,5 +1,3 @@
-# Create a clone of ‘cat /dev/random’
-
 I was tasked with creating a clone of running the Linux command: `cat /dev/random`
 
 My initial research led me to a few interesting places on the interwebs:
