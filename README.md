@@ -25,9 +25,9 @@ _"Generating true entropy in a computer is fairly difficult because nothing, out
 ### CSPRNGs
 I also learned the difference between **(PRNG)** _Pseudo Random Number Generators_ and **(CSPRNG)** _Cryptographically Secure Pseudo Random Number Generators_. PRNGs are not truly random because they generate a pseudo-random sequence based on the initial seed. Thus, they should be used for statistical modeling, simulation, and to make random data reproducible. CSPRNGs, on the other hand, read random bytes from `/dev/random` and thus work best for security and cryptographic applications where data sensitivity is imperative.
 
-## My Pseudo-Solution(s)
+## My Pseudo-Solutions
 - I have to admit that currently I do not have the engineering experience to deliver a true clone of `cat /dev/random`.
-- However, I did utilize the quantumrandom Python tool + Python's `os.urandom()` (module which doesn't rely on manual seeding) to create two naive solutions:
+- However, I did utilize the `quantumrandom` Python tool + Python's `os.urandom()` module (which doesn't rely on manual seeding) to create two naive solutions:
 
 ### Quantum.sh
 ```
