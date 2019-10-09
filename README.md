@@ -41,5 +41,3 @@ git clone https://github.com/yevgen93/random.git
 cd random
 python rand.py
 ```
-
-./
