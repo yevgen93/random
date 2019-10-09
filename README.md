@@ -27,7 +27,7 @@ I also learned the difference between **(PRNG)** _Pseudo Random Number Generator
 - I have to admit that currently I do not have the engineering experience to deliver a true clone of `cat /dev/random`.
 - However, I did utilize the `quantumrandom` Python tool + Python's `os.urandom()` module (which doesn't rely on manual seeding) to create two naive solutions:
 
-### Quantum.sh
+### Quantum.sh (assuming pip is installed)
 ```
 git clone https://github.com/yevgen93/random.git
 cd random
