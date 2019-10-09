@@ -21,8 +21,8 @@ _"Generating true entropy in a computer is fairly difficult because nothing, out
 ### Quantum Random Numbers
 - I have to admit that currently I do not have the engineering experience to deliver a true clone of `cat /dev/random`.
 - However, I did find a solid source of entropy; the [ANU Quantum Random Numbers Server](http://qrng.anu.edu.au).
-_"This website offers true random numbers to anyone on the internet. The random numbers are generated in real-time in our lab by measuring the quantum fluctuations of a vacuum."_
-- The ideal alternative solution to `cat /dev/random` would be to query their API as a entropy pool and dump the data to STDOUT.
+- _"This website offers true random numbers to anyone on the internet. The random numbers are generated in real-time in our lab by measuring the quantum fluctuations of a vacuum."_
+- The ideal alternative solution to `cat /dev/random` would be to query that quantum entropy pool via their API and dump the data to STDOUT.
 - After doing some more digging, I found a [Github project](https://github.com/kuberkaul/randomclone) that does just that. 
 - I also found a [Python tool](https://pypi.org/project/quantumrandom/) that interfaces with the same quantum entropy pool and provides the `qrandom` CLI.
 
